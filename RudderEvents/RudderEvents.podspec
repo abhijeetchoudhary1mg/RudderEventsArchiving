@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/bajpai-anand/RudderEvents.git", :tag =>  spec.version.to_s }
 
-  spec.source_files  = "RudderEvents/**/*.{h,m}"
+  spec.source_files  = "RudderEvents/**/*.{swift}"
   spec.swift_version = "5.0"
 
 end
