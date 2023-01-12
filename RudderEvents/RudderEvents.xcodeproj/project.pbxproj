@@ -10,6 +10,7 @@
 		174566BF296ED185000BC826 /* RudderEvents.docc in Sources */ = {isa = PBXBuildFile; fileRef = 174566BE296ED185000BC826 /* RudderEvents.docc */; };
 		174566C0296ED185000BC826 /* RudderEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 174566BD296ED185000BC826 /* RudderEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		174566C7296ED1AA000BC826 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174566C6296ED1AA000BC826 /* Validation.swift */; };
+		17D4718E296FFF4900B83090 /* RudderSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4718D296FFF4900B83090 /* RudderSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		174566BD296ED185000BC826 /* RudderEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderEvents.h; sourceTree = "<group>"; };
 		174566BE296ED185000BC826 /* RudderEvents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RudderEvents.docc; sourceTree = "<group>"; };
 		174566C6296ED1AA000BC826 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		17D4718D296FFF4900B83090 /* RudderSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudderSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 				174566BD296ED185000BC826 /* RudderEvents.h */,
 				174566BE296ED185000BC826 /* RudderEvents.docc */,
 				174566C6296ED1AA000BC826 /* Validation.swift */,
+				17D4718D296FFF4900B83090 /* RudderSwiftUIView.swift */,
 			);
 			path = RudderEvents;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				174566C7296ED1AA000BC826 /* Validation.swift in Sources */,
+				17D4718E296FFF4900B83090 /* RudderSwiftUIView.swift in Sources */,
 				174566BF296ED185000BC826 /* RudderEvents.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
