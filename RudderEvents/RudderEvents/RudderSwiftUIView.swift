@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RudderSwiftUIView: View {
-  var body: some View {
+public struct RudderSwiftUIView: View {
+  public var body: some View {
     NavigationView {
       List {
         Text("Hello")
