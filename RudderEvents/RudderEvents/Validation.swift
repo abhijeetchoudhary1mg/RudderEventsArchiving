@@ -14,3 +14,12 @@ public struct Validation {
   }
   
 }
+
+
+public struct Validation2 {
+  
+  public static func sayHello2() {
+    print("Hi hello you are bufallo2")
+  }
+  
+}
