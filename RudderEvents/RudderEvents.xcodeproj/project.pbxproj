@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1728D72C2976AE060055B294 /* RuuderEventTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D7272976AE060055B294 /* RuuderEventTracker.swift */; };
+		1728D72D2976AE060055B294 /* RudderSwiftUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D7282976AE060055B294 /* RudderSwiftUi.swift */; };
+		1728D72E2976AE060055B294 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D7292976AE060055B294 /* Analytics.swift */; };
+		1728D72F2976AE060055B294 /* AnalyticsListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D72A2976AE060055B294 /* AnalyticsListingViewModel.swift */; };
+		1728D7302976AE060055B294 /* AnalyticsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D72B2976AE060055B294 /* AnalyticsDetailView.swift */; };
 		174566BF296ED185000BC826 /* RudderEvents.docc in Sources */ = {isa = PBXBuildFile; fileRef = 174566BE296ED185000BC826 /* RudderEvents.docc */; };
 		174566C0296ED185000BC826 /* RudderEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 174566BD296ED185000BC826 /* RudderEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		174566C7296ED1AA000BC826 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174566C6296ED1AA000BC826 /* Validation.swift */; };
-		17D4718E296FFF4900B83090 /* RudderSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4718D296FFF4900B83090 /* RudderSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1728D7272976AE060055B294 /* RuuderEventTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuuderEventTracker.swift; sourceTree = "<group>"; };
+		1728D7282976AE060055B294 /* RudderSwiftUi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RudderSwiftUi.swift; sourceTree = "<group>"; };
+		1728D7292976AE060055B294 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		1728D72A2976AE060055B294 /* AnalyticsListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsListingViewModel.swift; sourceTree = "<group>"; };
+		1728D72B2976AE060055B294 /* AnalyticsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailView.swift; sourceTree = "<group>"; };
 		174566BA296ED185000BC826 /* RudderEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RudderEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		174566BD296ED185000BC826 /* RudderEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderEvents.h; sourceTree = "<group>"; };
 		174566BE296ED185000BC826 /* RudderEvents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RudderEvents.docc; sourceTree = "<group>"; };
-		174566C6296ED1AA000BC826 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		17D4718D296FFF4900B83090 /* RudderSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudderSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,11 @@
 			children = (
 				174566BD296ED185000BC826 /* RudderEvents.h */,
 				174566BE296ED185000BC826 /* RudderEvents.docc */,
-				174566C6296ED1AA000BC826 /* Validation.swift */,
-				17D4718D296FFF4900B83090 /* RudderSwiftUIView.swift */,
+				1728D7292976AE060055B294 /* Analytics.swift */,
+				1728D72B2976AE060055B294 /* AnalyticsDetailView.swift */,
+				1728D72A2976AE060055B294 /* AnalyticsListingViewModel.swift */,
+				1728D7282976AE060055B294 /* RudderSwiftUi.swift */,
+				1728D7272976AE060055B294 /* RuuderEventTracker.swift */,
 			);
 			path = RudderEvents;
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				174566C7296ED1AA000BC826 /* Validation.swift in Sources */,
-				17D4718E296FFF4900B83090 /* RudderSwiftUIView.swift in Sources */,
+				1728D72C2976AE060055B294 /* RuuderEventTracker.swift in Sources */,
+				1728D72D2976AE060055B294 /* RudderSwiftUi.swift in Sources */,
+				1728D7302976AE060055B294 /* AnalyticsDetailView.swift in Sources */,
+				1728D72E2976AE060055B294 /* Analytics.swift in Sources */,
+				1728D72F2976AE060055B294 /* AnalyticsListingViewModel.swift in Sources */,
 				174566BF296ED185000BC826 /* RudderEvents.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
