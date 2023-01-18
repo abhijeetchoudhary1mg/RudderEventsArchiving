@@ -7,13 +7,13 @@
 
 import Foundation
 
-public struct AnalyticsData: Hashable {
+public class AnalyticsData: NSObject {
   
-  public init() {}
+  public override init() {}
   
-  public var category = "long name of the category to test"
-  public var action = ""
-  public var label = ""
-  public var value = ""
-  public var id = Date()
+  @objc public var category = "long name of the category to test"
+  @objc public var action = ""
+  @objc public var label = ""
+  @objc public var value = ""
+  @objc public var id = Date()
 }

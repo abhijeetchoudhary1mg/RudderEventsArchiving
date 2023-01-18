@@ -8,15 +8,16 @@
 import UIKit
 import SwiftUI
 
-public class RudderEventTracker {
+@objc
+public class RudderEventTracker: NSObject {
   
-  public static let shared = RudderEventTracker()
+  @objc public static let shared = RudderEventTracker()
   
   private let rSUi = RudderSwiftUi()
   
-  private init() { }
+  private override init() { }
   
-  public func addRudderEventTapGesture() {
+  @objc public func addRudderEventTapGesture() {
     let globalGesture = UITapGestureRecognizer(target: self, action: #selector(globalTapped))
     globalGesture.numberOfTapsRequired = 2
     UIApplication.shared.getKeyWindow()?.addGestureRecognizer(globalGesture)
@@ -28,7 +29,7 @@ public class RudderEventTracker {
     UIApplication.topViewController()?.navigationController?.present(swiftUIController, animated: true)
   }
   
-  public func addDataToList(data: AnalyticsData) {
+  @objc public func addDataToList(data: AnalyticsData) {
     rSUi.viewModel.addDataIntoArray(analyticsData: data)
   }
   
