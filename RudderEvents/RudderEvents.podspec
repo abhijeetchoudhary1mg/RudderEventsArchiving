@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author       = { "Anand Bajpai" => "anand.bajpai@1mg.com" }
 
-  spec.platform     = :ios, "16.0"
+  spec.platform     = :ios, "13.0"
 
   spec.source       = { :git => "https://github.com/bajpai-anand/RudderEvents.git", :tag =>  spec.version.to_s }
 

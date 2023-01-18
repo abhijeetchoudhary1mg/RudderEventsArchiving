@@ -50,7 +50,6 @@ public struct RudderSwiftUi: View {
             viewModel.deleteData(at: indexSet)
           }
         }
-        .navigationTitle("Analytic Events")
       } else {
         Text("No records found")
       }
