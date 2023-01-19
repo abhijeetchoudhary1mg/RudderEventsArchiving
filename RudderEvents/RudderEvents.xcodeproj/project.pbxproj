@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1728D72C2976AE060055B294 /* RuuderEventTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D7272976AE060055B294 /* RuuderEventTracker.swift */; };
-		1728D72D2976AE060055B294 /* RudderSwiftUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D7282976AE060055B294 /* RudderSwiftUi.swift */; };
-		1728D72E2976AE060055B294 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D7292976AE060055B294 /* Analytics.swift */; };
-		1728D72F2976AE060055B294 /* AnalyticsListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D72A2976AE060055B294 /* AnalyticsListingViewModel.swift */; };
-		1728D7302976AE060055B294 /* AnalyticsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728D72B2976AE060055B294 /* AnalyticsDetailView.swift */; };
 		174566BF296ED185000BC826 /* RudderEvents.docc in Sources */ = {isa = PBXBuildFile; fileRef = 174566BE296ED185000BC826 /* RudderEvents.docc */; };
 		174566C0296ED185000BC826 /* RudderEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 174566BD296ED185000BC826 /* RudderEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17D8785F2979520300F90793 /* AnalyticsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8785E2979520300F90793 /* AnalyticsDetailView.swift */; };
+		17D878632979521900F90793 /* AnalyticsListingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878612979521900F90793 /* AnalyticsListingManager.swift */; };
+		17D878642979521900F90793 /* SwiftUIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878622979521900F90793 /* SwiftUIExtension.swift */; };
+		17D878652979522A00F90793 /* AnalyticsListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8785A297951F100F90793 /* AnalyticsListingViewModel.swift */; };
+		17D878662979522D00F90793 /* AnalyticsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8785B297951F100F90793 /* AnalyticsDataModel.swift */; };
+		17D878672979523100F90793 /* AnalyticsListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8785C297951F100F90793 /* AnalyticsListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1728D7272976AE060055B294 /* RuuderEventTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuuderEventTracker.swift; sourceTree = "<group>"; };
-		1728D7282976AE060055B294 /* RudderSwiftUi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RudderSwiftUi.swift; sourceTree = "<group>"; };
-		1728D7292976AE060055B294 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
-		1728D72A2976AE060055B294 /* AnalyticsListingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsListingViewModel.swift; sourceTree = "<group>"; };
-		1728D72B2976AE060055B294 /* AnalyticsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailView.swift; sourceTree = "<group>"; };
 		174566BA296ED185000BC826 /* RudderEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RudderEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		174566BD296ED185000BC826 /* RudderEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RudderEvents.h; sourceTree = "<group>"; };
 		174566BE296ED185000BC826 /* RudderEvents.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RudderEvents.docc; sourceTree = "<group>"; };
+		17D8785A297951F100F90793 /* AnalyticsListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsListingViewModel.swift; sourceTree = "<group>"; };
+		17D8785B297951F100F90793 /* AnalyticsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDataModel.swift; sourceTree = "<group>"; };
+		17D8785C297951F100F90793 /* AnalyticsListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsListingView.swift; sourceTree = "<group>"; };
+		17D8785E2979520300F90793 /* AnalyticsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailView.swift; sourceTree = "<group>"; };
+		17D878612979521900F90793 /* AnalyticsListingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsListingManager.swift; sourceTree = "<group>"; };
+		17D878622979521900F90793 /* SwiftUIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +61,38 @@
 			children = (
 				174566BD296ED185000BC826 /* RudderEvents.h */,
 				174566BE296ED185000BC826 /* RudderEvents.docc */,
-				1728D7292976AE060055B294 /* Analytics.swift */,
-				1728D72B2976AE060055B294 /* AnalyticsDetailView.swift */,
-				1728D72A2976AE060055B294 /* AnalyticsListingViewModel.swift */,
-				1728D7282976AE060055B294 /* RudderSwiftUi.swift */,
-				1728D7272976AE060055B294 /* RuuderEventTracker.swift */,
+				17D878602979521900F90793 /* Helper */,
+				17D87859297951F100F90793 /* Listing */,
+				17D8785D2979520300F90793 /* Detail */,
 			);
 			path = RudderEvents;
+			sourceTree = "<group>";
+		};
+		17D87859297951F100F90793 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				17D8785A297951F100F90793 /* AnalyticsListingViewModel.swift */,
+				17D8785B297951F100F90793 /* AnalyticsDataModel.swift */,
+				17D8785C297951F100F90793 /* AnalyticsListingView.swift */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		17D8785D2979520300F90793 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				17D8785E2979520300F90793 /* AnalyticsDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		17D878602979521900F90793 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				17D878612979521900F90793 /* AnalyticsListingManager.swift */,
+				17D878622979521900F90793 /* SwiftUIExtension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,11 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1728D72C2976AE060055B294 /* RuuderEventTracker.swift in Sources */,
-				1728D72D2976AE060055B294 /* RudderSwiftUi.swift in Sources */,
-				1728D7302976AE060055B294 /* AnalyticsDetailView.swift in Sources */,
-				1728D72E2976AE060055B294 /* Analytics.swift in Sources */,
-				1728D72F2976AE060055B294 /* AnalyticsListingViewModel.swift in Sources */,
+				17D878652979522A00F90793 /* AnalyticsListingViewModel.swift in Sources */,
+				17D878642979521900F90793 /* SwiftUIExtension.swift in Sources */,
+				17D878672979523100F90793 /* AnalyticsListingView.swift in Sources */,
+				17D878662979522D00F90793 /* AnalyticsDataModel.swift in Sources */,
+				17D8785F2979520300F90793 /* AnalyticsDetailView.swift in Sources */,
+				17D878632979521900F90793 /* AnalyticsListingManager.swift in Sources */,
 				174566BF296ED185000BC826 /* RudderEvents.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

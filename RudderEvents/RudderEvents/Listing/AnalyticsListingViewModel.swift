@@ -22,7 +22,7 @@ final class AnalyticsListingViewModel: ObservableObject {
   func deleteData(at offsets: IndexSet) {
     analyticsDataArray.remove(atOffsets: offsets)
   }
-  
+
   func deleteAllData() {
     analyticsDataArray.removeAll()
   }

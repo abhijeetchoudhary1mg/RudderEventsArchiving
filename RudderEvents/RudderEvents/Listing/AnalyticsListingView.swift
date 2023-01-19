@@ -1,14 +1,14 @@
 //
-//  RudderSwiftUi.swift
-//  
+//  AnalyticsListing.swift
+//  LearnSwiftUI
 //
-//  Created by anand on 13/01/23.
+//  Created by Neha Jain on 16/01/23.
 //
 
 import SwiftUI
 
-public struct RudderSwiftUi: View {
-  
+struct AnalyticsListing : View {
+
   @ObservedObject var viewModel = AnalyticsListingViewModel()
   
   var dateFormatter: DateFormatter {
@@ -17,17 +17,10 @@ public struct RudderSwiftUi: View {
     formatter.dateStyle = .short
     return formatter
   }
-  
-  @State private var analyticsDataArray = [AnalyticsData]()
-  
-  public init() {}
-  
-  func addDataIntoArray() {
-    let analyticsData = AnalyticsData()
-    analyticsDataArray.append(analyticsData)
-  }
-  
-  public var body: some View {
+
+  // some View -- opaque return type
+  //https://www.hackingwithswift.com/quick-start/beginners/how-to-use-opaque-return-types
+  var body: some View {
     NavigationView {
       if viewModel.getAnalyticsData().count > 0 {
         VStack {
@@ -37,6 +30,7 @@ public struct RudderSwiftUi: View {
                 VStack {
                   Text(data.category)
                     .font(.headline)
+                    .frame(alignment: .leading)
                   Text(dateFormatter.string(from: data.id))
                     .font(.subheadline).fontWeight(.light)
                 }
@@ -72,19 +66,6 @@ public struct RudderSwiftUi: View {
         Text("No records found")
       }
     }
-    .onAppear(perform: addDataIntoArray)
   }
 }
 
-
-extension View {
-
-  @ViewBuilder func navTitle(title: String) -> some View {
-    if #available(iOS 14.0, *) {
-      self.navigationTitle(title)
-    }
-    else {
-      self.navigationBarTitle(title)
-    }
-  }
-}

@@ -1,20 +1,18 @@
 //
-//  RuuderEventTracker.swift
-//  experi3frame
+//  AnalyticsListingManager.swift
+//  LearnSwiftUI
 //
-//  Created by anand on 13/01/23.
+//  Created by Neha Jain on 16/01/23.
 //
 
 import UIKit
 import SwiftUI
 
-@objc
-public class RudderEventTracker: NSObject {
+public class AnalyticsListingManager: NSObject {
   
-  @objc public static let shared = RudderEventTracker()
+  @objc public static let shared = AnalyticsListingManager()
   
-  private let rSUi = RudderSwiftUi()
-  
+  private let listingView = AnalyticsListing()
   private override init() { }
   
   @objc public func addRudderEventTapGesture() {
@@ -25,15 +23,13 @@ public class RudderEventTracker: NSObject {
   }
   
   @objc func globalTapped() {
-    
-    let swiftUIController = UIHostingController(rootView: rSUi)
+    let swiftUIController = UIHostingController(rootView: listingView)
     UIApplication.topViewController()?.present(swiftUIController, animated: true)
   }
-  
+
   @objc public func addDataToList(data: AnalyticsData) {
-    rSUi.viewModel.addDataIntoArray(analyticsData: data)
+    listingView.viewModel.addDataIntoArray(analyticsData: data)
   }
-  
 }
 
 
