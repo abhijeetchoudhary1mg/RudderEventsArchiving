@@ -20,13 +20,14 @@ public class RudderEventTracker: NSObject {
   @objc public func addRudderEventTapGesture() {
     let globalGesture = UITapGestureRecognizer(target: self, action: #selector(globalTapped))
     globalGesture.numberOfTapsRequired = 2
+    globalGesture.numberOfTouchesRequired = 2
     UIApplication.shared.getKeyWindow()?.addGestureRecognizer(globalGesture)
   }
   
   @objc func globalTapped() {
     
     let swiftUIController = UIHostingController(rootView: rSUi)
-    UIApplication.topViewController()?.navigationController?.present(swiftUIController, animated: true)
+    UIApplication.topViewController()?.present(swiftUIController, animated: true)
   }
   
   @objc public func addDataToList(data: AnalyticsData) {

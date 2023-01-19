@@ -8,13 +8,46 @@
 import SwiftUI
 
 struct AnalyticsDetailView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  let analyticsData: AnalyticsData?
+  
+  var dateFormatter: DateFormatter {
+    let formatter = DateFormatter()
+    formatter.timeStyle = .short
+    formatter.dateStyle = .short
+    return formatter
+  }
+  
+  var body: some View {
+    if let data = analyticsData {
+      VStack {
+        DetailView(heading: "Date",
+                   description: dateFormatter.string(from: data.id))
+        DetailView(heading: "Category",
+                   description: data.category)
+        DetailView(heading: "Label",
+                   description: data.label)
+        DetailView(heading: "Value",
+                   description: data.value)
+        DetailView(heading: "Action",
+                   description: data.action)
+      }
+    } else {
+      Text("No records found")
     }
+  }
 }
 
-struct AnalyticsDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnalyticsDetailView()
+struct DetailView: View {
+  var heading: String
+  var description: String
+  
+  var body: some View {
+    HStack {
+      Text(heading)
+        .font(.headline)
+      Text(description)
+        .font(.subheadline)
     }
+    .padding(10)
+  }
 }
