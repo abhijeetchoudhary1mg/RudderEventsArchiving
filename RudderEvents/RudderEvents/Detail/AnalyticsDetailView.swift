@@ -19,26 +19,28 @@ struct AnalyticsDetailView: View {
   
   var body: some View {
     if let data = analyticsData {
-      VStack {
-        DetailView(heading: "Date",
-                   description: dateFormatter.string(from: data.id))
-        DetailView(heading: "Category",
-                   description: data.category)
-        DetailView(heading: "Label",
-                   description: data.label)
-        DetailView(heading: "Value",
-                   description: data.value)
-        DetailView(heading: "Action",
-                   description: data.action)
-        Text("Custom Data")
-          .padding()
-          .overlay(
-            RoundedRectangle(cornerRadius: 0)
-              .stroke(.black, lineWidth: 1)
-          )
-        ForEach(data.customData.sorted(by: >), id: \.key) { key, value in
-          DetailView(heading: key,
-                     description: value)
+      ScrollView {
+        VStack {
+          DetailView(heading: "Date",
+                     description: dateFormatter.string(from: data.id))
+          DetailView(heading: "Category",
+                     description: data.category)
+          DetailView(heading: "Label",
+                     description: data.label)
+          DetailView(heading: "Value",
+                     description: data.value)
+          DetailView(heading: "Action",
+                     description: data.action)
+          Text("Custom Data")
+            .padding()
+            .overlay(
+              RoundedRectangle(cornerRadius: 0)
+                .stroke(.black, lineWidth: 1)
+            )
+          ForEach(Array(data.customData.keys), id: \.self) { key  in
+            DetailView(heading: key,
+                       description: data.customData[key]?.description ?? "")
+          }
         }
       }
     } else {
@@ -64,10 +66,6 @@ struct DetailView: View {
           .padding()
           .lineLimit(nil)
       }
-//      .overlay(
-//        RoundedRectangle(cornerRadius: 0)
-//          .stroke(.black, lineWidth: 1)
-//      )
       .frame(maxWidth: .infinity, alignment: .topLeading)
     }
   }

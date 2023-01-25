@@ -18,8 +18,6 @@ struct AnalyticsListing : View {
     return formatter
   }
 
-  // some View -- opaque return type
-  //https://www.hackingwithswift.com/quick-start/beginners/how-to-use-opaque-return-types
   var body: some View {
     NavigationView {
       if viewModel.getAnalyticsData().count > 0 {
@@ -68,4 +66,3 @@ struct AnalyticsListing : View {
     }
   }
 }
-

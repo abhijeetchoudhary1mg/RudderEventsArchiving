@@ -15,7 +15,7 @@ public class AnalyticsData: NSObject {
   public init(category: String?,
               action: String?,
               label: String?,
-              customDimention: [String: String]?) {
+              customDimention: [String: AnyObject]?) {
     if let category = category {
       self.category = category
     }
@@ -35,13 +35,6 @@ public class AnalyticsData: NSObject {
   @objc public var label = ""
   @objc public var value = ""
   let id = Date()
-  @objc public var customData = [String: String]()
+  @objc public var customData = [String: AnyObject]()
 
-//  func hash(into hasher: inout Hasher) {
-//    return hasher.combine(id)
-//  }
-//
-//  static func == (lhs: AnalyticsData, rhs: AnalyticsData) -> Bool {
-//    return lhs.id == rhs.id
-//  }
 }
