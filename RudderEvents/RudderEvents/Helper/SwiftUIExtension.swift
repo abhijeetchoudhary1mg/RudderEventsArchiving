@@ -18,4 +18,25 @@ extension View {
       self.navigationBarTitle(title)
     }
   }
+
+  func hideNavigationBarStyle() -> some View {
+    modifier( HiddenNavigationBar() )
+  }
+
+  @ViewBuilder func inlineNavigationBar()  -> some View {
+    if #available(iOS 14.0, *) {
+      self.navigationBarTitleDisplayMode(.inline)
+    }
+    else {
+      self.navTitle(title: "")
+    }
+  }
+}
+
+struct HiddenNavigationBar: ViewModifier {
+  func body(content: Content) -> some View {
+    content
+      .navigationBarTitle("", displayMode: .inline)
+      .navigationBarHidden(true)
+  }
 }

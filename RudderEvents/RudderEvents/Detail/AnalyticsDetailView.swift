@@ -19,8 +19,7 @@ struct AnalyticsDetailView: View {
   
   var body: some View {
     if let data = analyticsData {
-      ScrollView {
-        VStack {
+        Form {
           DetailView(heading: "Date",
                      description: dateFormatter.string(from: data.id))
           DetailView(heading: "Category",
@@ -42,7 +41,8 @@ struct AnalyticsDetailView: View {
                        description: data.customData[key]?.description ?? "")
           }
         }
-      }
+        .inlineNavigationBar()
+        .offset(y: 40)
     } else {
       Text("No records found")
     }

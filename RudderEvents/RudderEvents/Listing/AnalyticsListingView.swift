@@ -21,7 +21,6 @@ struct AnalyticsListing : View {
   var body: some View {
     NavigationView {
       if viewModel.getAnalyticsData().count > 0 {
-        VStack {
           List {
             ForEach(viewModel.getAnalyticsData(), id: \.self) { data in
               HStack {
@@ -29,8 +28,10 @@ struct AnalyticsListing : View {
                   Text(data.category)
                     .font(.headline)
                     .frame(alignment: .leading)
+                    .lineLimit(nil)
                   Text(dateFormatter.string(from: data.id))
                     .font(.subheadline).fontWeight(.light)
+                    .frame(alignment: .leading)
                 }
                 NavigationLink(destination: AnalyticsDetailView(analyticsData: data)) {
                 }
@@ -40,29 +41,18 @@ struct AnalyticsListing : View {
               viewModel.deleteData(at: indexSet)
             }
           }
-          Button {
-            viewModel.deleteAllData()
-          } label: {
-            Text("Delete")
-              .padding()
-              .foregroundColor(.white)
-              .lineLimit(nil)
-              .font(.headline)
-              .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: 60,
-                alignment: .center
-              )
-          }
-          .background(Color.red)
-          .contentShape(Rectangle())
-        }
         .navTitle(title: "Analytic Events")
+        .offset(y: 30)
+        .navigationBarItems(trailing: deleteButton)
       } else {
         Text("No records found")
       }
+    }
+  }
+
+  var deleteButton: some View {
+    Button(action: {viewModel.deleteAllData()}) {
+      Text("Delete")
     }
   }
 }
