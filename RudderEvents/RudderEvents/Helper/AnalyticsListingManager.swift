@@ -22,7 +22,7 @@ public class AnalyticsListingManager: NSObject {
     UIApplication.shared.getKeyWindow()?.addGestureRecognizer(globalGesture)
   }
   
-  @objc func globalTapped() {
+  @objc public func globalTapped() {
     let swiftUIController = UIHostingController(rootView: listingView)
     UIApplication.topViewController()?.present(swiftUIController, animated: true)
   }
