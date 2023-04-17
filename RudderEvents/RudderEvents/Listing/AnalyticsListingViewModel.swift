@@ -12,13 +12,38 @@ final class AnalyticsListingViewModel: ObservableObject {
   @Published private var analyticsDataArray = [AnalyticsData]()
 
   func addDataIntoArray(analyticsData: AnalyticsData) {
-    analyticsDataArray.append(analyticsData)
+    DispatchQueue.main.async { [weak self] in
+      self?.analyticsDataArray.append(analyticsData)
+    }
   }
 
-  func getAnalyticsData() -> [AnalyticsData] {
+  func getAnalyticsData(searchCategory: String?, searchText: String? = nil) -> [AnalyticsData] {
+    if let searchText = searchText,
+       !searchText.isEmpty {
+      switch searchCategory {
+      case "Label":
+        let labelResults = analyticsDataArray.filter({ $0.label.isEmpty == false && $0.label.lowercased().contains(searchText.lowercased()) })
+        return labelResults
+      case "Category":
+        let labelResults = analyticsDataArray.filter({ $0.category.isEmpty == false && $0.category.lowercased().contains(searchText.lowercased())})
+        return labelResults
+      case "Screen":
+        let labelResults = analyticsDataArray.filter({ $0.screenName.isEmpty == false && $0.screenName.lowercased().contains(searchText.lowercased())})
+        return labelResults
+      case "Action":
+        let labelResults = analyticsDataArray.filter({ $0.action.isEmpty == false && $0.action.lowercased().contains(searchText.lowercased())})
+        return labelResults
+      case "Custom Dimensions":
+        let labelResults = analyticsDataArray.filter({ !($0.customData.keys.filter({ ($0.isEmpty == false) && $0.lowercased().contains(searchText.lowercased()) }).isEmpty)
+        })
+        return labelResults
+      default:
+        break
+      }
+    }
     return analyticsDataArray
   }
-
+  
   func deleteData(at offsets: IndexSet) {
     analyticsDataArray.remove(atOffsets: offsets)
   }
