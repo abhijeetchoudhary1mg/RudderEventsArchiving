@@ -60,6 +60,7 @@ struct AnalyticsListing : View {
               .valueChanged(value: currentSelectedCity) { newValue in
                 print(newValue)
               }
+
             }
             Button("Delete All", action: {
                 self.showsAlert = true
@@ -101,6 +102,7 @@ struct AnalyticsListing : View {
               HStack {
                 VStack {
                   HStack {
+                    let categoryTextColor: Color = data.isGAEventTracked ? .orange : .black
                     Text("Category: ")
                       .frame(maxWidth: .infinity, alignment: .leading)
                       .fixedSize(horizontal: false, vertical: true)
@@ -112,6 +114,7 @@ struct AnalyticsListing : View {
                       .frame(maxWidth: .infinity)
                       .fixedSize(horizontal: false, vertical: true)
                           .frame(minWidth: 80)
+                          .foregroundColor(categoryTextColor)
                   }
                   HStack {
                     Text("Screen Name: ").frame(maxWidth: .infinity, alignment: .leading)

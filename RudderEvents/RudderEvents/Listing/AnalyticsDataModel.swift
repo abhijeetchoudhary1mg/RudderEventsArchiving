@@ -9,6 +9,10 @@ import Foundation
 
 public class AnalyticsData: NSObject {
 
+  private struct Defaults {
+   static let isGAEventTrackedKey = "isGAEventTracked"
+  }
+
   public override init() {}
   
   @objc
@@ -37,6 +41,11 @@ public class AnalyticsData: NSObject {
     if let customDimention = customDimention {
       self.customData = customDimention
     }
+
+    if let isGAEventTracked = customDimention?[Defaults.isGAEventTrackedKey] as? Bool {
+      self.isGAEventTracked = isGAEventTracked
+      self.customData.removeValue(forKey: Defaults.isGAEventTrackedKey)
+    }
   }
 
   @objc public var category = ""
@@ -46,4 +55,5 @@ public class AnalyticsData: NSObject {
   @objc public var screenName = ""
   let id = Date()
   @objc public var customData = [String: AnyObject]()
+  @objc public var isGAEventTracked = false
 }
