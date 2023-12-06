@@ -37,13 +37,28 @@ final class AnalyticsListingViewModel: ObservableObject {
         let labelResults = analyticsDataArray.filter({ !($0.customData.keys.filter({ ($0.isEmpty == false) && $0.lowercased().contains(searchText.lowercased()) }).isEmpty)
         })
         return labelResults
+      case "PLA Events":
+        if let labelResults = getPlaEvents(searchText: searchText) {
+          return labelResults
+        }
       default:
         break
       }
     }
+    else if searchCategory == "PLA Events" {
+      if let labelResults = getPlaEvents(searchText: "") {
+        return labelResults
+      }
+    }
     return analyticsDataArray
   }
-  
+
+  func getPlaEvents(searchText: String) -> [AnalyticsData]? {
+    return analyticsDataArray.filter({ !($0.customData.keys.filter({ ($0 == "onlineSalesEvent") || $0.lowercased().contains(searchText.lowercased()) }).isEmpty)
+    })
+    return nil
+  }
+
   func deleteData(at offsets: IndexSet) {
     analyticsDataArray.remove(atOffsets: offsets)
   }

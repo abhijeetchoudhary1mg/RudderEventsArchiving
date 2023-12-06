@@ -17,7 +17,7 @@ struct AnalyticsListing : View {
   
   @SwiftUI.State private var currentSelectedCity: City = City(name: "Category")
   @ObservedObject var viewModel = AnalyticsListingViewModel()
-  var array = [City(name: "Category"), City(name: "Screen"), City(name: "Label"), City(name: "Action"), City(name: "Custom Dimensions")]
+  var array = [City(name: "Category"), City(name: "Screen"), City(name: "Label"), City(name: "Action"), City(name: "Custom Dimensions"), City(name: "PLA Events")]
   @State private var searchText = ""
   @State var showsAlert = false
   @State private var showCancelButton: Bool = false

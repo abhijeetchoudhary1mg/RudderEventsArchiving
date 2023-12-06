@@ -20,7 +20,8 @@ public class AnalyticsData: NSObject {
               action: String?,
               label: String?,
               screen: String?,
-              customDimention: [String: AnyObject]?) {
+              customDimention: [String: AnyObject]?,
+              extras: [String: AnyObject]? = nil) {
 
     if let category = category {
       self.category = category
@@ -42,6 +43,10 @@ public class AnalyticsData: NSObject {
       self.customData = customDimention
     }
 
+    if let extras = extras {
+      self.extras = extras
+    }
+
     if let isGAEventTracked = customDimention?[Defaults.isGAEventTrackedKey] as? Bool {
       self.isGAEventTracked = isGAEventTracked
       self.customData.removeValue(forKey: Defaults.isGAEventTrackedKey)
@@ -55,5 +60,6 @@ public class AnalyticsData: NSObject {
   @objc public var screenName = ""
   let id = Date()
   @objc public var customData = [String: AnyObject]()
+  @objc public var extras = [String: AnyObject]()
   @objc public var isGAEventTracked = false
 }

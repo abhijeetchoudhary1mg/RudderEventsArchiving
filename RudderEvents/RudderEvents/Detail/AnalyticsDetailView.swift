@@ -60,6 +60,13 @@ struct AnalyticsDetailView: View {
             DetailView(heading: "ScreenName",
 
                        description: data.screenName)
+            ForEach(Array(data.extras.keys), id: \.self) { key  in
+
+              DetailView(heading: key,
+
+                         description: data.extras[key]?.description ?? "")
+
+            }
 
             Text("Custom Data")
 
