@@ -30,6 +30,10 @@ public class AnalyticsListingManager: NSObject {
   @objc public func addDataToList(data: AnalyticsData) {
     listingView.viewModel.addDataIntoArray(analyticsData: data)
   }
+  
+  public func getDataArray() -> [AnalyticsData] {
+    return listingView.viewModel.analyticsDataArray
+  }
 }
 
 

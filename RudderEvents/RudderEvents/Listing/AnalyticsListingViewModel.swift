@@ -9,7 +9,7 @@ import Foundation
 
 final class AnalyticsListingViewModel: ObservableObject {
 
-  @Published private var analyticsDataArray = [AnalyticsData]()
+  @Published private(set) var analyticsDataArray = [AnalyticsData]()
 
   func addDataIntoArray(analyticsData: AnalyticsData) {
     DispatchQueue.main.async { [weak self] in
