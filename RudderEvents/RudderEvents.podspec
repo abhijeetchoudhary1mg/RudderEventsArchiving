@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "13.0"
 
-  spec.source       = { :git => "https://github.com/abhijeetchoudhary1mg/RudderEventsArchiving", :tag =>  spec.version.to_s }
+  spec.source       = { :git => "https://github.com/abhijeetchoudhary1mg/RudderEventsArchiving.git", :tag =>  spec.version.to_s }
 
   spec.source_files  = "RudderEvents/**/*.{swift}"
   spec.swift_version = "5.0"
