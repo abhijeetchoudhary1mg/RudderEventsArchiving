@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "RudderEventsArchiving"
-  spec.version      = "1.1.7"
+  spec.version      = "1.1.8"
   spec.summary      = "A short description of RudderEvents."
   spec.description  = "don't know about description"
 
